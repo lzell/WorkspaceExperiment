@@ -1,3 +1,31 @@
-Go to Project Navigator > Hello App > Build Phases and tap the plus
-sign next to Target Dependencies.  Note that the framework target is
-not presented as an option
+To embed a framework that's the output of a sibling project within the same Xcode workspace:
+
+1. Build HelloFramework for iOS, _not_ for simulator
+2. Go to Project Navigator > HelloApp > Target > Build Phases
+3. Add HelloFramework to the Link Binary With Libraries phase
+4. Back in Project Navigator, the linked framework will appear under HelloApp, select it
+5. Open the utilities pane (cmd+opt+0)
+6. Change the Location of HelloFramework to "Relative to Build Products"
+7. Back in Build Phases for HarpApp, Create an additional Copy Files phase
+8. Set the Destination to "Frameworks"
+9. Add the HelloFramework that's nested under HelloApp
+
+This setup prevents the runtime error:
+
+dyld: Library not loaded: @rpath/HelloFramework.framework/HelloFramework
+Referenced from: /var/containers/Bundle/Application/<snip>/HelloApp.app/HelloApp
+Reason: image not found
+
+And:
+
+dyld: Library not loaded: @rpath/HelloFramework.framework/HelloFramework
+Referenced from: /var/containers/Bundle/Application/<snip>/HelloApp.app/HelloApp
+Reason: no suitable image found.  Did find:
+/private/var/containers/Bundle/Application/<snip>/HelloApp.app/Frameworks/HelloFramework.framework/HelloFramework: mach-o, but wrong architecture
+
+And the compile time error:
+
+Copy HelloFramework.framework
+PBXCp /Users/lou/Library/Developer/Xcode/DerivedData/<snip>/Products/Debug-iphoneos/HelloFramework.framework /Users/lou/Library/Developer/Xcode/DerivedData/<snip>/Products/Debug-iphonesimulator/HelloApp.app/Frameworks/HelloFramework.framework
+error: /Users/lou/Library/Developer/Xcode/DerivedData/<snip>/Products/Debug-iphoneos/HelloFramework.framework: No such file or directory
+
