@@ -1,0 +1,3 @@
+Go to Project Navigator > Hello App > Build Phases and tap the plus
+sign next to Target Dependencies.  Note that the framework target is
+not presented as an option
