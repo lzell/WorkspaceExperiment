@@ -1,13 +1,13 @@
 //
-//  ViewController.swift
-//  HelloApp
+//  Hello.swift
+//  HelloFramework
 //
 //  Created by Lou Zell on 8/16/16.
 //  Copyright © 2016 Lou Zell. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class ViewController: UIViewController {
+public func sayHello() {
+    print("Hello")
 }
-

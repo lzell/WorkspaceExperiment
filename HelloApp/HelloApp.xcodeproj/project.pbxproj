@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A22590E1D63786800B4ADFA /* HelloFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A22590D1D63786800B4ADFA /* HelloFramework.framework */; };
+		9A22590F1D63787300B4ADFA /* HelloFramework.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9A22590D1D63786800B4ADFA /* HelloFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9AF68E081D635CB800918EFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF68E071D635CB800918EFF /* AppDelegate.swift */; };
 		9AF68E0A1D635CB800918EFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF68E091D635CB800918EFF /* ViewController.swift */; };
 		9AF68E0D1D635CB800918EFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AF68E0B1D635CB800918EFF /* Main.storyboard */; };
@@ -14,7 +16,21 @@
 		9AF68E121D635CB800918EFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AF68E101D635CB800918EFF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		9AF68E2A1D636CEA00918EFF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9A22590F1D63787300B4ADFA /* HelloFramework.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		9A22590D1D63786800B4ADFA /* HelloFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HelloFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AF68E041D635CB800918EFF /* HelloApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AF68E071D635CB800918EFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AF68E091D635CB800918EFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A22590E1D63786800B4ADFA /* HelloFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +55,7 @@
 		9AF68DFB1D635CB800918EFF = {
 			isa = PBXGroup;
 			children = (
+				9A22590D1D63786800B4ADFA /* HelloFramework.framework */,
 				9AF68E061D635CB800918EFF /* HelloApp */,
 				9AF68E051D635CB800918EFF /* Products */,
 			);
@@ -74,6 +92,7 @@
 				9AF68E001D635CB800918EFF /* Sources */,
 				9AF68E011D635CB800918EFF /* Frameworks */,
 				9AF68E021D635CB800918EFF /* Resources */,
+				9AF68E2A1D636CEA00918EFF /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -288,6 +307,7 @@
 				9AF68E181D635CB800918EFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
